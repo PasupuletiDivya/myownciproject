@@ -20,14 +20,14 @@ pipeline {
          NEXUSPORT = '8081'
          NEXUS_GRP_REPO = 'vpro-maven-group'
          NEXUS_LOGIN = 'nexuslogin' 
-         SONARSERVER = 'sonarserver'
+         SONARSERVER = 'sonarserver1'
          SONARSCANNER = 'sonarscanner'
     }
 
     stages {
         stage('Build') {
             steps {
-               sh mvn clean install -U -DskipTests -Dmaven.repo.local=~/.m2/repository
+               sh 'mvn clean install -U -DskipTests -Dmaven.repo.local=~/.m2/repository'
                }
                post {
                 success {
