@@ -27,7 +27,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               sh mvn clean install -U -DskipTests -Dmaven.repo.local=~/.m2/repository'
+               sh mvn clean install -U -DskipTests -Dmaven.repo.local=~/.m2/repository
                }
                post {
                 success {
